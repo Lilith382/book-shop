@@ -27,7 +27,6 @@ export class AppComponent implements AfterViewInit {
     let existedCartItem = this.cart.cartItems.find(x=>x.book.id === book.id);
     if(existedCartItem){
       existedCartItem.count +=1;
-      console.log(existedCartItem.count);
     } else
     {
       let cartItem = new CartItem(book, 1);

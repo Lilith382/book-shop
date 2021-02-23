@@ -21,6 +21,5 @@ export class BooksComponent implements OnInit {
   }
   onBuy(book: Book): void{
     this.buyBook.emit(this.selectedBook);
-    console.log(this.selectedBook);
   }
 }

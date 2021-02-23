@@ -21,7 +21,6 @@ export class CartComponent implements OnInit {
       return result;
   }
   deleteCartItem(cartItem: CartItem): void {
-    console.log("deleteCartItem");
     this.cart.cartItems = this.cart.cartItems.filter(x=>x.book.id !== cartItem.book.id);
   }
 }

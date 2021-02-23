@@ -27,7 +27,6 @@ export class CartItemComponent {
   }
   onDelete(): void {
     if(this.cartItem) {
-      console.log("onDelete");
       this.delCartItem.emit(this.cartItem);
     }
   }
