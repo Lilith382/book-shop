@@ -1,0 +1,12 @@
+<h2>Cart</h2>
+<div>
+    <app-cart-item *ngFor='let cartItem of cart.cartItems' 
+        [cartItem] = "cartItem" 
+        (incCount)="getSummary()" 
+        (decCount)="getSummary()"
+        (delCartItem)="deleteCartItem($event)"> 
+    </app-cart-item>
+</div>
+<div>
+    <span>Summary: </span>{{getSummary()}}
+</div>
