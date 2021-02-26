@@ -1,0 +1,7 @@
+<li *ngIf='cartItem'>
+    <span>{{cartItem.book.name}}: {{cartItem.book.price}}</span>&nbsp;
+    <input type="button" value="+" (click)="onIncCount()">&nbsp;
+    <span>{{cartItem.count}}</span>&nbsp;
+    <input type="button" value="-" (click)="onDecCount()">&nbsp;
+    <input type="button" value="Delete" (click)="onDelete()">&nbsp;
+</li>

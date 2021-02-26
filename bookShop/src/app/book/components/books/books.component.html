@@ -1,0 +1,19 @@
+<h2>Books</h2>
+<ul class="books">
+    <li *ngFor='let book of books' [class.selected]="book===selectedBook" (click)="onSelect(book)">
+        {{book.name}}
+    </li>
+</ul>
+<div *ngIf="selectedBook">
+    <h3>{{selectedBook.name}} Details</h3>
+    <div><span>Price: </span>{{selectedBook.price}}</div>
+    <div><span>Category: </span>{{selectedBook.getCategory()}}</div>
+    <div><span>Description: </span>{{selectedBook.description}}</div>
+    <div><span>CreatedDate: </span>{{selectedBook.createDate}}</div>
+    <div><span>IsAvalable: </span>{{selectedBook.isAvalable}}</div>
+  <div>
+  <div *ngIf="selectedBook.isAvalable">
+    <input type="button" (click)="onBuy(selectedBook)" value="Buy">
+  </div>
+
+</div>
